@@ -3,7 +3,7 @@
   Description: This program will take an integer as an input then
   output the individual digits of the integer and the sum of the digits.
   Author: James Taddei
-  Date: 2/20/21
+  Date: 9/20/21
 */
 
 #include <iostream>
