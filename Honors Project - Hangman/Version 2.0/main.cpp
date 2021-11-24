@@ -86,8 +86,6 @@ int main() {
     numOfTotalGuesses++; // Adds the letter to the lettersGuessed array
   } while (!wordFound && numOfWrongGuesses < 5);
 
-  delete [] letterFound; // Deletes the array of the letters found
-
   // At this point, the user has either won or lost. The result will be displayed and the user will be prompted on if they guessed it or not
   if (!wordFound) {
     // Ouputs the revelant info
@@ -95,6 +93,8 @@ int main() {
 
     // Prints that the user failed to find the word and outputs the word
     cout << "You have failed to find the word with less than 5 wrong guesses. The word was '" << wordToGuess << "'. Better luck next time!" << endl;
+
+    delete [] letterFound; // Deletes the array of the letters found
 
     // Prompts the user for if they want to play again
     cout << "Would you like to play again (y/Y or n/N): ";
@@ -106,7 +106,9 @@ int main() {
     }
   }
   else { // Runs if the user found the word
-    cout << endl << "Good job! You found the word with only " << numOfWrongGuesses << " wrong guesses." << endl; // Outputs the number of wrong guesses the user had
+    cout << endl << "Good job! You found the word with only " << numOfWrongGuesses << " wrong guess(es)." << endl; // Outputs the number of wrong guesses the user had
+
+    delete [] letterFound; // Deletes the array of the letters found
 
     // Prompts the user for if they want to play again
     cout << endl << "Would you like to play again (y/Y or n/N): ";
