@@ -10,8 +10,6 @@ stamp
 postcard
 dictionary
 brush
-mobile phone
-phone card
 wallet
 button
 umbrella
